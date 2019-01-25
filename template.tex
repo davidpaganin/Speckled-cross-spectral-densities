@@ -255,68 +255,72 @@ As a third and final example, when $\vec{r_2}$ is set to position $C$, we have t
 
 The calculation of the coherent mode decomposition for the undulator radiation is performed in the source plane, placed the middle of the undulator. It is more realistic to propagate the radiation to a some distance downstream from the source, to a position in which a potential two-slit Young experiment would be feasible. As mentioned before, the propagated CSD is calculated by adding the propagated-modes. Propagation is made using a Fourier Optics Fresnel propagator, including a zoom factor \todo{cite Schmidt and Pirro} that permits to adapt the window for different propagated distances. The propagated first mode and spectral density at a distance D=30 m is shown in \inblue{Fig.~\ref{spectral_density_propagated}}. The FWHM of the spectral density is 431$\times$316 $\mu$m$^2$. Again, for a sanity check, this size can be compared with the propagation (30 m) of the beam divergence estimated as the convolution of the undulator emission divergence $\sigma'_\gamma=0.68\sqrt{\lambda/L}$ with the electron divergences ($\sigma'_x$=3.64 $\mu$rad and $\sigma'_y$=1.37 $\mu$ rad giving 498$\times$366 $\mu$m$^2$ FWHM.). 
 
-\begin{figure}\label{spectral_density_propagated}
+\begin{figure}\label{spectral_density_propagated}%file plot_spectral_density.py
 \caption{Top: Spectral density (intensity) distribution at a plane placed at 30 m from the source. Bottom: Intensity of the first coherent mode at this plane.}
 \includegraphics[width=9.0cm]{Figures/spectral_density_upto1099_propagated.png}
-\includegraphics[width=9.0cm]{Figures/spectral_density_upto0000_propagated.png}
+\includegraphics[width=9.0cm]{Figures/spectral_density_upto0_propagated.png}
 \end{figure}
 
 The CSD propagated at ESRF for different fixed points A', B' and C' are shown in \inblue{Fig.~\ref{points_propagated30}}. The coordinates of A',B' and C' have been selected to be homethetic with respect to the position of A,B,C supposing that the FWHM at the source will transform in the FWHM' at the propagated distance. In practice $(x_A/FHWM_{x,D=0},y_A/FHWM_{y,D=0})=x_A'/FHWM_{x,D=30},y_A'/FHWM_{y,D=30})$, and similarly for B and C. This figure shows a very strong variation of the phase. It looks like a sort of far-field regime is attained. In the Fraunhofer regime, the shape of the intensity distribution is not changed, it only expands with distance. A similar behaviour may be expected with the phase. Also, the rich structure of the phase map makes technically difficult to look to the details and identify the exact position and neighbourhood of the vortices. It is therefore more interesting to look to closer propagation distances, in the near field. 
 
 
-\begin{figure}
-\caption{Phase as a function of $(x,y)$ of $W(x,y,x_P,y_P)$ at z=30m, with P=A',B',C', when the number $n$ of non-dominant coherent modes is (from top to bottom) 1, 10, 100, and 1000. The brightness of the displayed phase is proportional to $|W(x,y,x_P,y_P)|$, since CSD phase is not meaningful when $|W(x,y,x_P,y_P)|$ is negligible. \todo{May be remove this plot? I think \inblue{Fig.~\ref{pointC_propagated}} would be sufficient. Perhaps replace 100m propagation there by 30m propagation here?} }
-A'~~~~~~~~~~~~~~~~~~~~~~~~~~~~B'~~~~~~~~~~~~~~~~~~~~~~~~~~~~C'\\
-\includegraphics[width=2.75cm]{Figures/vx_id16a_A_propagated.png}
-\includegraphics[width=2.75cm]{Figures/vx_id16a_B_propagated.png}
-\includegraphics[width=2.75cm]{Figures/vx_id16a_C_propagated.png}
-\includegraphics[width=7cm]{Figures/color_bar.png}
-\label{points_propagated30}
-\end{figure}
+% \begin{figure}\label{points_propagated30}%file: plot_color.py
+% \caption{Phase as a function of $(x,y)$ of $W(x,y,x_P,y_P)$ at z=30m, with P=A',B',C', when the number $n$ of non-dominant coherent modes is (from top to bottom) 1, 10, 100, and 1000. The brightness of the displayed phase is proportional to $|W(x,y,x_P,y_P)|$, since CSD phase is not meaningful when $|W(x,y,x_P,y_P)|$ is negligible. \todo{May be remove this plot? I think \inblue{Fig.~\ref{pointC_propagated}} would be sufficient. Perhaps replace 100m propagation there by 30m propagation here?} }
+% A'~~~~~~~~~~~~~~~~~~~~~~~~~~~~B'~~~~~~~~~~~~~~~~~~~~~~~~~~~~C'\\
+% \includegraphics[width=0.32\textwidth]{Figures/vx_id16a_A_propagated.png}
+% \includegraphics[width=0.32\textwidth]{Figures/vx_id16a_B_propagated.png}
+% \includegraphics[width=0.32\textwidth]{Figures/vx_id16a_C_propagated.png}
+% \includegraphics[width=0.9\textwidth]{Figures/color_bar.png}
+% 
+% \end{figure}
 
 
 The Figure~\ref{pointC_propagated} shows the propagated CSD at various distances (D=1,5,100) at a point C'. Its coordinates are scaled with respect of the coordinates of C' at D=30, such as $(x_{C',D},y_{C',D})=(x_{C',D=30},y_{C',D=30} D / 30.0)$. The results show a much rich structure at short propagation distances (near field), and the image at D=100m looks similar to the corresponding one at D=30m in \inblue{Fig.~\ref{points_propagated30}}. It can be shown that phase maps are very different at D=1m and at D=5m, manifesting that we are in the near field regime.   
 
 
-\begin{figure}
-\caption{Phase as a function of $(x,y)$ of $W(x,y,x_{C'},y_{C'})$ at z=1m (top),5m (middle) and 100m (bottom), when the number $n$ of non-dominant coherent modes is (a, top) 1; (b) 10; (c) 100; (d, bottom) 1000. The brightness of the displayed phase is proportional to $|W(x,y,x_{C'},y_{C'})|$, since CSD phase is not meaningful when $|W(x,y,x_{C'},y_{C'})|$ is negligible.}
-C'@1m~~~~~~~~~~~~~~~~~~~~~~~~~~~~C'@5m~~~~~~~~~~~~~~~~~~~~~~~~~~~~C'@100m\\
-\includegraphics[width=2.75cm]{Figures/vx_id16a_C1_propagated.png}
-\includegraphics[width=2.75cm]{Figures/vx_id16a_C5_propagated.png}
-\includegraphics[width=2.75cm]{Figures/vx_id16a_C100_propagated.png}
+\begin{figure}\label{pointC_propagated}%file: plot_color.py
+\caption{Phase as a function of $(x,y)$ of $W(x,y,x_{C'},y_{C'})$ at $z$=1 m (top), 5 m (middle) and 100 m (bottom), when the number $n$ of non-dominant coherent modes is (a, top) 1; (b) 10; (c) 100; (d, bottom) 1000. The brightness of the displayed phase is proportional to $|W(x,y,x_{C'},y_{C'})|$, since CSD phase is not meaningful when $|W(x,y,x_{C'},y_{C'})|$ is negligible.}
+C'@1m~~~~~~~~~~~~~~~~~~~~~~~~~~~~C'@5m~~~~~~~~~~~~~~~~~~~~~~~~~~~~C'@30m\\
+\includegraphics[width=0.32\textwidth]{Figures/vx_id16a_C1_propagated.png}
+\includegraphics[width=0.32\textwidth]{Figures/vx_id16a_C5_propagated.png}
+\includegraphics[width=0.32\textwidth]{Figures/vx_id16a_C_propagated.png}
 \includegraphics[width=7cm]{Figures/color_bar.png}
-\label{pointC_propagated}
+
 \end{figure}
 
 Next we want to see how the phase maps evolve in the neighbourhood of a propagated distance. For that a situation with a map rich in vortices with resolution that allows to study the variations. Ideally the maps for D=1m n=100 could be selected, but we preferred to go to longer distance (position where it would be feasible to have a measurement) and reduce the maximum mode. Selecting D=5$\pm$1 m and n=20 we "scanned" the phase map along 1m keeping fixed the point C'. \inblue{Fig.~\ref{neighbour}} shows the result. 
 
 
-\begin{figure}
-\caption{Phase as a function of $(x,y)$ of $W(x,y,x_{C'},y_{C'})$ at different distances close to D=5$\pm$1 m, when the number $n$ of non-dominant coherent modes is 10 (top), 20 (middle) and 100 (bottom). The brightness of the displayed phase is proportional to $|W(x,y,x_{C'},y_{C'})|$, since CSD phase is not meaningful when $|W(x,y,x_{C'},y_{C'})|$ is negligible.}
-\includegraphics[width=9cm]{Figures/vx_id16a_C5_propagated_neighbour_mode0009.png}
-\includegraphics[width=9cm]{Figures/vx_id16a_C5_propagated_neighbour_mode0019.png}
-\includegraphics[width=9cm]{Figures/vx_id16a_C5_propagated_neighbour_mode0099.png}
-\label{neighbour}
+\begin{figure}\label{neighbour}%file: plot_sequence.py
+\caption{Phase as a function of $(x,y)$ of $W(x,y,x_{C'},y_{C'})$ at different distances close to $D$=5 $\pm$1 m, when the number of non-dominant coherent modes is $n$=20. The brightness of the displayed phase is proportional to $|W(x,y,x_{C'},y_{C'})|$, since CSD phase is not meaningful when $|W(x,y,x_{C'},y_{C'})|$ is negligible.}
+\includegraphics[width=0.99\textwidth]{Figures/vx_id16a_C5_propagated_neighbour_mode0019.png}
+
 \end{figure}
 
 
 Next, we want to simulate a sort of Young experiment by placing two circular apertures in the plane to where the CSD has been propagated (5 m downstream from the source). These apertures are at points (xD,yD)=(-10$\mu m$,-25$\mu m$) and its opposite (xE,yE)=(10$\mu m$,25$\mu m$). The slits apertures are closed to 3.6 and 3$\mu m$ for points D and E, respectively. The radiation thet goes through the apertures is propagated 30m downstream the plane with the apertures. At the image plane a screen is placed to record the intensity. When the apertures are illuminated by a mostly coherent source an interference pattern with fringes is produced. \inblue{Fig.~\ref{young}} (top) shows the interferece pattern produced by the CSD calculating using only the zeroth mode (complete coherence). It can be observed a strong visibility or contrast in the fringes, as expected for a coherent source. Adding coherent modes in the construction of the CSD will reduce progressively the visibility (see pattern up to mode 3 in \inblue{Fig.~\ref{young}}). However, adding the mode index 4 in the construction of the CSD will drastically reduce the contrast in the fringes, because now the CSD presents a vortex in E. The mode 5 will not modify substantially the situation, but mode 6 pushes the vortex outside the aperture E recovering some visibility. This situation repeats several times as one increses the number of modes that contribute to the CSD. For example, the CSD built with modes up to 18 does not present a vortex in E, but up to mode 20 does (\inblue{Fig.~\ref{young2}}). Increasing the number of modes used for building the CSD makes an the beam less and less coherent, and the fringes visibility is then lost, see for example the case of CSD up to the 99th mode in \inblue{Fig.~\ref{young2}}. 
 
-It is interesting to remark that although this procedure of adding modes to built the CSD is an artificial way to study the visibility depending on the coherence, in a real situation of a synchrotron beamline the beamline optics play a similar role. In a beamline some optical elements (ideal reflectors, ideal focusing elements) do not alter the occupation spectrum of the modes. They are non-absorbing or conservative elements. However, if an optical element remove photons from the beam, or ``cuts'' intensity, then its effect is different on the different modes. The new transformed ``modes'' can be used to build the CSD, but they cannot be considered coherence modes as they are not an orthonormal basis for expanding the CSD. But a new coherent mode decomposition can be done on the transmitted CSD. In the case of slits or pinholes centerd in the middle of the beam, the lower modes that are well localised near the center of the beam axis will propagate, whereas the higher modes (extended far from the center) will be absorbed. This will produce a push of the occupation spectrum to the lower modes with a resulting increase of coherence fraction (and obviously a decrease of the spectral density or total intensity).     
+It is interesting to remark that although this procedure of adding modes to built the CSD is an artificial way to study the visibility depending on the coherence, in a real situation of a synchrotron beamline the beamline optics play a similar role. In a beamline some optical elements (ideal reflectors, ideal focusing elements) do not alter the occupation spectrum of the modes. They are non-absorbing or conservative elements in the sense of Smith-Helmholtz invariant. However, if an optical element remove photons from the beam, or ``cuts'' intensity, then its effect is different on the different modes. The new transformed ``modes'' can be used to build the CSD, but they cannot be considered coherent modes as they are not longer an orthonormal basis for expanding the CSD. A new coherent mode decomposition could be calculated on the transmitted CSD in order to obtain the new coherent modes. In the case of slits or pinholes centerd on the optical axis, the lower coherent modes localised near the center of the beam axis will propagate, whereas the higher coherent modes that extend far from the axis will be absorbed. This will push of the occupation spectrum to the lower modes with a consequent increase of coherence fraction but an obvious decrease of the spectral density (total intensity).     
 
 \begin{figure}
 \caption{On the left, the phase of $W(x,y,x_{D},y_{D})$ is represented. The circles represent the position of apertures at D (red) and E (black) used for a Young-type virtual experiment. On the right the interference pattern produced by propagating the radiation 30 m downstream from the plane containing the apertures. Strictly speaking, the Spectral Density obtained from the propagated CSD. From top to bottom, the number of coherent modes used to build the CSD is varied (1,4,5 and 7).}
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0000_csd.png}
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0000_pattern.png}
+\includegraphics[width=0.375\textwidth]{Figures/interference_D_uptomode0000_csd.png}
+\includegraphics[width=0.4\textwidth]{Figures/interference_D_uptomode0000_pattern.png}
 
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0003_csd.png}
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0003_pattern.png}
+\includegraphics[width=0.375\textwidth]{Figures/interference_D_uptomode0003_csd.png}
+\includegraphics[width=0.4\textwidth]{Figures/interference_D_uptomode0003_pattern.png}
 
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0004_csd.png}
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0004_pattern.png}
+\includegraphics[width=0.375\textwidth]{Figures/interference_D_uptomode0004_csd.png}
+\includegraphics[width=0.4\textwidth]{Figures/interference_D_uptomode0004_pattern.png}
 
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0006_csd.png}
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0006_pattern.png}
+\includegraphics[width=0.375\textwidth]{Figures/interference_D_uptomode0006_csd.png}
+\includegraphics[width=0.4\textwidth]{Figures/interference_D_uptomode0006_pattern.png}
+
+\includegraphics[width=0.375\textwidth]{Figures/interference_D_uptomode0018_csd.png}
+\includegraphics[width=0.4\textwidth]{Figures/interference_D_uptomode0018_pattern.png}
+
+\includegraphics[width=0.375\textwidth]{Figures/interference_D_uptomode0019_csd.png}
+\includegraphics[width=0.4\textwidth]{Figures/interference_D_uptomode0019_pattern.png}
 
 \label{young}
 \end{figure}
@@ -328,21 +332,21 @@ It is interesting to remark that although this procedure of adding modes to buil
 %%
 %
 
-\begin{figure}
-\caption{The same as \inblue{Fig.~\ref{young}} but using 19,20 and 100 modes for building the CSD.}
-
-
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0018_csd.png}
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0018_pattern.png}
-
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0019_csd.png}
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0019_pattern.png}
-
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0099_csd.png}
-\includegraphics[width=4cm]{Figures/interference_D_uptomode0099_pattern.png}
-
-\label{young2}
-\end{figure}
+% \begin{figure}
+% \caption{The same as \inblue{Fig.~\ref{young}} but using 19,20 and 100 modes for building the CSD.}
+% 
+% 
+% \includegraphics[width=4cm]{Figures/interference_D_uptomode0018_csd.png}
+% \includegraphics[width=4cm]{Figures/interference_D_uptomode0018_pattern.png}
+% 
+% \includegraphics[width=4cm]{Figures/interference_D_uptomode0019_csd.png}
+% \includegraphics[width=4cm]{Figures/interference_D_uptomode0019_pattern.png}
+% 
+% \includegraphics[width=4cm]{Figures/interference_D_uptomode0099_csd.png}
+% \includegraphics[width=4cm]{Figures/interference_D_uptomode0099_pattern.png}
+% 
+% \label{young2}
+% \end{figure}
 
 
 \section{Discussion}
