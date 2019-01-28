@@ -32,7 +32,14 @@ W(x_1,y_1,x_2,y_2,z,\omega) =
 The CSD quantifies the two-point correlation properties of a partially coherent statistically stationary source \cite{Wolf1982,mandel_wolf}. 
 It is the input input needed to properly model any subsequent x-ray data obtained by streaming such CSD through subsequent optical elements, samples, and detector.
 
-Recall that the cross-spectral density $W$, spectral density $S$ and mutual coherence function (normalized CSD) $\mu$ are related by $W(r_1,r_2,\omega)=\sqrt{S(r_1,\omega)}\sqrt{S(r_2,\omega)}\mu(r_1,r_2,\omega)$. 
+Recall that the cross-spectral density $W$, spectral density $S$ and spectral degree of coherence (normalized CSD) $\mu$ are related by 
+\begin{equation}
+S(r_1,\omega) = W(r_1,r_1,\omega) 
+\end{equation}
+
+\begin{equation}
+W(r_1,r_2,\omega)=\sqrt{S(r_1,\omega)}\sqrt{S(r_2,\omega)}\mu(r_1,r_2,\omega)
+\end{equation}
 
 In this work, we consider the role played by the phase of CSD. It governs the position of Young-type interference fringes formed when the disturbance from two different spatial points is combined. It influences the detected intensity in both imaging and non-imaging experiments.
 
@@ -46,9 +53,9 @@ In this work, we consider the role played by the phase of CSD. It governs the po
 \section{What is a vortex?}
 
 
-\begin{figure}\label{loss_of_fringe_visibility}
-\includegraphics[width=0.45\textwidth]{Figures/coherence_vortex.png}
-\end{figure}
+%\begin{figure}\label{loss_of_fringe_visibility}
+\includegraphics[width=0.7\textwidth]{Figures/coherence_vortex.png}
+%\end{figure}
  
  
 $W$ is single-valued, but $\Phi$ will in general be multi-valued. Indeed, since the phase of a complex number is only defined modulo $2\pi$ radians, it may wind by an integer multiple of $2\pi$ in the following manner (see Fig.~\ref{loss_of_fringe_visibility}b) \cite{GburVisser2003}: 
@@ -63,16 +70,16 @@ A non-zero $m$ indicates the presence of non-trivial topology in the phase of $W
 
 The existence of any {\em one} circuit $\Gamma$ for which $m$ is non-zero, implies the presence of a (nodal) manifold of points in $(x_1,y_1,x_2,y_2,z,\omega)$-space, at each of which $W$ vanishes. These nodal points in $W$ exhibit ``complete destructive interference of coherence''. If, for example, a point scatterer were to be placed at $A$, with another point scatterer at $B$, and the radiation scattered from both points allowed to overlap, no interference fringes would be observed if the resulting diffracted fields were to be filtered to angular frequency $\omega'$.
 
-\begin{figure}\label{Young_fringe_anholonomy}
+%\begin{figure}\label{Young_fringe_anholonomy}
 \includegraphics[width=0.7\textwidth]{Figures/Anholonomy.png}
-\end{figure}
+%\end{figure}
  
 The vortical nature of the coherence vortex is manifested if one performs a sequence of Young-type interference experiments, where the pinhole at $B$ is kept fixed, while the pinhole at $C1$ is moved through the cycle of locations $C1$ (curve 2), $C2$ (curve 3), $C3$ (curve 4), $C4$ (curve 5) and finally back to $C1$ (curve 6 = curve 2). If one traces the evolution of the intensity maxima associated with the sequence of Young-type interferograms in curves 2 to 6, the physical meaning of $m$ becomes clear: during the cycle, if $m=1$ then the maxima of the interferogram will ``ratchet'' to the right by one fringe during the cycle. If $m=-1$ they would instead ratchet to the left by one fringe during the cycle.  For general $m$, the fringes would ratchet to the right (left) by $|m|$ fringes, if $m$ is positive (negative).
  
  
 \section{Do we expect coherence vortices in our synchrotron beams}
 
-Yes. As far as the beam is partial coherent, there are vortices. The number of vortices depend on the coherent fraction. More coherence imply less vortices, but their effect is more visible in a potential experiment. We make a theoretical-numeric study here of the vortices in a synchrotron beam to be produced by EBS. We find correlation singularities in the CSD computed by a realistic x-ray undulator model, together with an associated speckled CSD structure.
+Yes. As far as the beam is partial coherent, there are vortices. Only fully coherent wavefronts ($W=cte$) or fully incoherent beams ($W=0$) do not present vortices. The number of vortices depend on the coherent fraction. More coherence imply less vortices, but their effect is more visible in a potential experiment. We make a theoretical-numeric study here of the vortices in a synchrotron beam to be produced by EBS. We find correlation singularities in the CSD computed by a realistic x-ray undulator model, together with an associated speckled CSD structure.
 
 
 \section{How to calculate the CSD and its phase to look for vortices?}
@@ -140,7 +147,12 @@ A~~~~~~~~~~~~~~~~~~~~~~~~~~~~B~~~~~~~~~~~~~~~~~~~~~~~~~~~~C\\
  
  
  
- 
+\section{conclusion}
+
+\begin{itemize}
+\item Coherence vortices will exist in most non-trivial x-ray fields like synchrotron sources. An understanding of their existence will deepen our understanding of imaging and diffraction data obtained at EBS
+\item Such coherence vortices influence the images that one takes, in ways that may lead to misleading results if one simply ignores their existence
+\end{itemize}
  
  
  
