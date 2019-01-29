@@ -22,7 +22,7 @@
 
 \section{What is the Cross Spectral Density (CSD)?}
 
-It is a function that fully describes the coherence properties of a synchrotron beam. It measures the correlation of the electric disturbance between two points,
+It is the function that fully describes the coherence properties of a synchrotron beam. It measures the correlation of the electric disturbance between two points,
 
 \begin{equation}
 W(x_1,y_1,x_2,y_2,z,\omega) = 
@@ -41,11 +41,15 @@ S(r_1,\omega) = W(r_1,r_1,\omega)
 W(r_1,r_2,\omega)=\sqrt{S(r_1,\omega)}\sqrt{S(r_2,\omega)}\mu(r_1,r_2,\omega)
 \end{equation}
 
-In this work, we consider the role played by the phase of CSD. It governs the position of Young-type interference fringes formed when the disturbance from two different spatial points is combined. It influences the detected intensity in both imaging and non-imaging experiments.
+In this work, we consider the role played by the phase of CSD. 
 
 \begin{equation}\label{phase_of_W}
 \Phi(x_1,y_1,x_2,y_2,z,\omega)=\arg[W(x_1,y_1,x_2,y_2,z,\omega)]
 \end{equation}
+
+It governs the position of Young-type interference fringes formed when the disturbance from two different spatial points is combined. It influences the detected intensity in both imaging and non-imaging experiments.
+
+
 
 
 
@@ -56,30 +60,39 @@ In this work, we consider the role played by the phase of CSD. It governs the po
 %\begin{figure}\label{loss_of_fringe_visibility}
 \includegraphics[width=1\textwidth]{Figures/coherence_vortex.png}
 %\end{figure}
- $W$ is single-valued, but $\Phi$ will in general be multi-valued. Indeed, since the phase of a complex number is only defined modulo $2\pi$ radians, it may wind by an integer multiple of $2\pi$ in the following manner \cite{GburVisser2003}: 
+The CSD is a single-valued function, but its phase $\Phi$ will in general be multi-valued. Indeed, since the phase of a complex number is only defined modulo $2\pi$ radians, it may wind by an integer multiple of $2\pi$ in the following manner \cite{GburVisser2003}: 
 \begin{equation}
 \label{phase_of_W_winding}
 \oint_{\Gamma} d\Phi(x_1,y_1,x_2,y_2,z,\omega)=2\pi m.
 \end{equation}
-Here, $\Gamma$ is any smooth closed curve (see Fig.), $m$ is an integer and $d\Phi$ is the increment in $\Phi$ corresponding to an infinitesimal line segment of $\Gamma$.
-A non-zero $m$ indicates the presence of non-trivial topology in the phase of $W$, thus a coherence vortex \cite{GburVisser2003} is present.  It can be recognized in the false color maps of the phase at the positions where at least three colors meet.
+Here, $\Gamma$ is any smooth closed curve as seen in the figure, $m$ is an integer and $d\Phi$ is the increment in $\Phi$ corresponding to an infinitesimal line segment of $\Gamma$.
+A non-zero $m$ indicates the presence of non-trivial topology in the phase of the CSD, thus a coherence vortex \cite{GburVisser2003} is present.  It can be recognized in the false color maps of the phase at the positions where at least three colors meet.
 
 \section{What do a vortex imply?}
 
-The existence of any {\em one} circuit $\Gamma$ for which $m$ is non-zero, implies the presence of a (nodal) manifold of points in $(x_1,y_1,x_2,y_2,z,\omega)$-space, at each of which $W$ vanishes. These nodal points in $W$ exhibit {\bf complete destructive interference of coherence'}. 
+The existence of any {\em one} circuit $\Gamma$ for which $m$ is non-zero around a point A, implies the presence of a manifold of points in $(x_A,y_A,x_B,y_B,z,\omega)$-space, at each of which $W$ vanishes. These nodal points in $W$ exhibit {\bf complete destructive interference of coherence'}. 
 
-If, for example, a point scatterer were to be placed at $A$, with another point scatterer at $B$, and the radiation scattered from both points allowed to overlap, no interference fringes would be observed (curve 1).
+If one has a point scatterer at $A$ and another point scatterer at $B$, the radiation scattered from both points overlap, but no interference fringes would be observed (curve 1).
 
 
 \includegraphics[width=0.7\textwidth]{Figures/Anholonomy.png}
 
  
-The vortical nature of the coherence vortex is manifested if one performs a sequence of Young-type interference experiments, where the pinhole at $B$ is kept fixed, while the pinhole at $C1$ is moved through the cycle of locations $C1$ (curve 2), $C2$ (curve 3), $C3$ (curve 4), $C4$ (curve 5) and finally back to $C1$ (curve 6 = curve 2). If one traces the evolution of the intensity maxima associated with the sequence of Young-type interferograms in curves 2 to 6, the physical meaning of $m$ becomes clear: during the cycle, if $m=1$ then the maxima of the interferogram will ``ratchet'' to the right by one fringe during the cycle. If $m=-1$ they would instead ratchet to the left by one fringe during the cycle.  For general $m$, the fringes would ratchet to the right (left) by $|m|$ fringes, if $m$ is positive (negative).
+Let us perform a sequence of Young-type interference experiments, where the pinhole at $B$ is kept fixed, while the pinhole at $C1$ is moved through the cycle of locations $C1$ (curve 2), $C2$ (curve 3), $C3$ (curve 4), $C4$ (curve 5) and finally back to $C1$ (curve 6 = curve 2). If one traces the evolution of the intensity maxima associated with the sequence of Young-type interferograms in curves 2 to 6, the physical meaning of $m$ becomes clear: during the cycle, if $m=1$ then the maxima of the interferogram will ``ratchet'' to the right by one fringe during the cycle. If $m=-1$ they would instead ratchet to the left by one fringe during the cycle.  For general $m$, the fringes would ratchet to the right (left) by $|m|$ fringes, if $m$ is positive (negative).
+
+This is an example of a propagated ($z$=5~m) CSD built using 20 coherent modes. The red circle marks the point $D$ and the map shows $\mathcad{\Phi}(x,y)=\arg[W(x,y,x_D,y_D]$. The black circle is positioned on a vortex. 
  
- 
+
+\includegraphics[width=0.7\textwidth]{FiguresPoster/interference_D_uptomode0020_csd.png}
+
+
+\includegraphics[width=0.7\textwidth]{Figures/colorbar.png}
+
+
+
 \section{Do we expect coherence vortices in our synchrotron beams}
 
-Yes. As far as the beam is partial coherent, there are coherence vortices. Only fully coherent wavefronts ($W=cte$) or fully incoherent beams ($W=0$) do not present vortices. The number of vortices depend on the coherent fraction. More coherence imply less vortices, but their effect is more visible in a potential experiment. 
+Yes. As far as the beam is partial coherent, there are coherence vortices. Only fully coherent wavefronts ($W=cte$) and fully incoherent beams ($W=0$) do not present vortices. The number of vortices depend on the coherent fraction. More coherence imply less vortices, but their effect is more visible in a potential experiment. 
 
 We present here a theoretical-numeric study  of the vortices in a synchrotron beam to be produced by EBS. We find correlation singularities in the CSD computed by a realistic x-ray undulator model, together with an associated speckled CSD structure.
 
@@ -102,10 +115,11 @@ We analyzed the case if a U18 undulator at 17 keV. We need about 1000 modes to r
 
 \includegraphics[width=0.6\textwidth]{Figures/vx_cumulated.png}
 
-The total intensity (spectral density) and extension of the first mode are: 
+The total intensity (spectral density) is: 
 
 \includegraphics[width=0.85\textwidth]{Figures/spectral_density_upto1099.png}
 
+The extension of the first mode is:
 
 \includegraphics[width=0.85\textwidth]{Figures/spectral_density_upto0.png}
 
