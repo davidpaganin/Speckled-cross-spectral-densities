@@ -189,7 +189,7 @@ Let the CSD phase be denoted as follows:
 \begin{aligned}
 \label{phase_of_W}
 \Phi(x_1,y_1,x_2,y_2,z,\omega)=\arg[W(x_1,y_1,x_2,y_2,z,\omega)]
-\end{aligned}\label{eq:CSDphase}
+\end{aligned}
 \end{equation}
 This quantity governs the position of Young-type interference fringes which would be formed, if one were to combine the disturbances $\alpha$ and $\beta$ scattered from points $(x_1,y_1,z)\equiv A$ and $(x_2,y_2,z)\equiv B$, respectively, at energy $\hbar\omega$ \cite{mandel_wolf}---see Fig.~\ref{loss_of_fringe_visibility}a. This CSD phase is complemented by the magnitude of the CSD, which governs the visibility of the previously-mentioned Young-type fringes.
 
@@ -240,15 +240,17 @@ Figure~\ref{spectral_density} shows the spatial extension of the spectral densit
 Figure~\ref{cumulative_mode_occupation} shows a few hundred modes to be needed to represent more than 90\% of the spectral density. The spectral density FWHM (full width at half maximum) has dimensions 71.3$\times$10.9 $\mu$m$^2$. This agrees well with simple estimates considering the source size as a convolution of the undulator emission: $\sigma_\gamma\approx (2.74/4\pi) \sqrt{\lambda L}\approx$9.6 $\mu$m ($\lambda$ is the radiation wavelength and $L$ is the undulator length) with the electron-bunch size ($\sigma_x$=30.2$\mu$m, and $\sigma_y$=1.37$\mu$m for the EBS straight section). The resulting FWHM values are 71.3$\times$10.0 $\mu$m$^2$. The size (FWHM) of the first mode is 12.4$\times$6.11 $\mu$m$^2$.  
 
 \begin{figure}
-\includegraphics[trim=15mm 5mm 0 0,clip,width=9.5cm]{Figures/vx_cumulated.png}
-\caption{Cumulative mode occupation for  emission of undulator U18 placed at EBS lattice and tuned to a photon energy 17.226 keV. Occupation of the zeroth mode (coherent fraction) is 0.028. \textcolor{red}{Manuel, please change the vertical label to ``Cumulative occupation''.}}
+%\includegraphics[trim=15mm 5mm 0 0,clip,width=9.5cm]{Figures/vx_cumulated.png}
+\includegraphics[width=7cm]{Figures/vx_cumulated.png}
+\caption{Cumulative mode occupation for  emission of undulator U18 placed at EBS lattice and tuned to a photon energy 17.226 keV. Occupation of the zeroth mode (coherent fraction) is 0.028. \textcolor{red}{Manuel, please change the vertical label to ``Cumulative occupation''. DONE. NOTE I CHANGED TO LOG SCALE. I THINK IS MORE READABLE. IF YOU PREFER THE LIN SCALE CHANGE TO FILE: Figures/vx\_cumulated\_lin.png}}
 \label{cumulative_mode_occupation}
 \end{figure}
 
 \begin{figure}%file plot_spectral_density.py
-\includegraphics[width=9.0cm]{Figures/spectral_density_upto1099.png}
-\includegraphics[width=9.0cm]{Figures/spectral_density_upto0.png}
-\caption{(a) Spectral density (intensity) distribution at the source plane. (b) Intensity of the first coherent mode at the source plane. \textcolor{red}{Manuel, please add ``(a)'' and ``(b)'' labels.  Also, please make the vertical axis labels have the same size as the horizontal axis labels.}}
+%\includegraphics[width=9.0cm]{Figures/spectral_density_upto1099.png}
+%\includegraphics[width=9.0cm]{Figures/spectral_density_upto0.png}
+\includegraphics[width=9.0cm]{Figures/spectral_density.png}
+\caption{(a) Spectral density (intensity) distribution at the source plane. (b) Intensity of the first coherent mode at the source plane. \textcolor{red}{Manuel, please add ``(a)'' and ``(b)'' labels. DONE.  Also, please make the vertical axis labels have the same size as the horizontal axis labels. THERE IS THE SAME ASPECT RATIO FOR THE PIXEL, EVEN IF THE LABEL NUMBERING IS DIFFERENT}}
 \label{spectral_density}
 \end{figure}
 
@@ -287,9 +289,10 @@ As a third and final example, when $\vec{r_2}$ is set to position $C$, we have t
 The calculation of the coherent mode decomposition for the undulator radiation has been performed in the source plane, located in the middle of the undulator. It is more realistic to propagate the radiation downstream from the source, e.g.~to a position in which a potential two-slit Young experiment would be feasible. As mentioned earlier, the propagated CSD is calculated by adding  propagated coherent modes. Propagation is performed using a Fourier representation of the Fresnel propagator, including a zoom factor \cite{schmidt,pirro} that enables adaptation of the window for different propagated distances. The propagated first-mode and total spectral density at a distance $z=30$~m is shown in Fig.~\ref{spectral_density_propagated}. The FWHM of the spectral density is 431$\times$316 $\mu$m$^2$. Again, for a consistency check, this size can be compared with the propagation (30~m) of the beam divergence estimated as the convolution of the undulator emission divergence $\sigma'_\gamma=0.68\sqrt{\lambda/L}$ with the electron divergences ($\sigma'_x$=3.64 $\mu$rad and $\sigma'_y$=1.37 $\mu$ rad giving 498$\times$366 $\mu$m$^2$ FWHM.). 
 
 \begin{figure}
-\includegraphics[width=9.0cm]{Figures/spectral_density_upto1099_propagated.png}
-\includegraphics[width=9.0cm]{Figures/spectral_density_upto0_propagated.png}
-\caption{(a) Spectral density (intensity) distribution at a plane placed at 30 m from the source. (b) Intensity of the first coherent mode at this plane. \textcolor{red}{Add ``(a)'' and ``(b)'' labels, please.  Also, the vertical-axis labels need to be the same size as the horizontal-axis labels.}}
+%\includegraphics[width=9.0cm]{Figures/spectral_density_upto1099_propagated.png}
+%\includegraphics[width=9.0cm]{Figures/spectral_density_upto0_propagated.png}
+\includegraphics[width=9.0cm]{Figures/spectral_density_propagated.png}
+\caption{(a) Spectral density (intensity) distribution at a plane placed at 30 m from the source. (b) Intensity of the first coherent mode at this plane. \textcolor{red}{Add ``(a)'' and ``(b)'' labels, please.  Also, the vertical-axis labels need to be the same size as the horizontal-axis labels. SAME COMMENT AS FOR FIG 4}}
 \label{spectral_density_propagated}%file plot_spectral_density.py
 \end{figure}
 
